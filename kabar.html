@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kabar Kamu Gimana, Pookie?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audioPlayer" loop autoplay muted>
+        <source src="wali.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+  <div class="container">
+    <h1>Kabar Kamu Gimana, Pookie? 🥺</h1>
+    <p class="subtext">Aku harap kamu baik-baik aja yaa cantiikkkk... jangan lupa makan, jangan terlalu capek okeyyyyyy 😢</p>
+    
+    <div class="quotes">
+      <p>"Akuuu harappp kamuuu selaluuu bahagiaaa yaaa, dimanaapunn kamuuu, pokoknyaaaa haruss selaluu bahagiaa yaa 🤍."</p>
+      <p>"Kalau kamu capek, jangan sungkan cerita ya... aku dengerin kok."</p>
+    </div>
+
+    <div class="container">
+        <p class="subtext">Semogaaa sukaaa yaaa, maappp jugaa kalooo kurangg bagusss, tapiii yangg pastiii akuuu sayangggggggggggg bangettt samaa kamuuu...</p>
+
+    <button class="maaf-btn" onclick="alert('💖💖💖💖💖💖💖💖💖💖💖')">🤍Lovee Youu Cayanggg🤍</button>
+
+    <script>
+        window.onload = function() {
+          var audio = document.getElementById('audioPlayer');
+          
+          // Coba autoplay dengan audio yang di-mute
+          audio.play().catch(function(error) {
+            console.log("Autoplay gagal:", error);
+            
+            // Kalau autoplay gagal, tunggu interaksi untuk unmute dan play
+            window.addEventListener('click', function() {
+              audio.muted = false; // Unmute audio
+              audio.play().catch(function(error) {
+                console.log("Gagal memutar setelah unmute:", error);
+              });
+            });
+          });
+        };
+      </script>
+      
+  </div>
+</body>
+</html>

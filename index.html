@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maapp yaaaaa Levinaa Sayanggg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audioPlayer" loop autoplay muted>
+        <source src="lagu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+  <div class="container">
+    <h1>💖Maafin Aku Yaaaaa Levinaa Tersayangggggg 💖</h1>
+    <p class="subtext">Maapp kalooo seringg bikinnn hariii harii kamuuu jadiii gak seruuu...</p>
+
+    <br>
+
+    <div class="quotes">
+      <p>"Maapppp yaaa cantikkkk kalooo bercandaa kamuuu badmood, tapiii akuuu janjiiii bakallll ngebatasinnn manaa bercandaa yanggg benerrr benerrr seruu tanpaa haruss bikinnn kamuuu badmood."</p>
+      <p>"Maappp jugaaa yaaa cantikkkkk kalooo seringg bikinnn kamuuu jadiii sebelll samaaa akuuu ."</p>
+      <p>"Maapp punyaaa cowok yang ngeselinnyaa bikinnnn gaaa seruuu ya, Sayangggggggggggg 😔"</p>
+    </div>
+
+    <div class="floating-imgs">
+        <img src="foto1.jpg" alt="Foto Pookie" class="float-img left">
+        <img src="foto2.jpg" alt="Foto Pookie" class="float-img right">
+      </div>
+      <!-- Ganti src di atas dengan foto-foto kalian -->
+    </div>
+
+    <button class="maaf-btn" onclick="alert('Makasih udah maafin aku ya, Pookie 🥺❤️')">Maappp Yaaaa Cayangg</button>
+  </div>
+
+    <a href="kabar.html">
+        <button class="next-btn">Aku Pengen Nanya Sesuatu...</button>
+    </a>
+    <script>
+        window.onload = function() {
+          var audio = document.getElementById('audioPlayer');
+          
+          // Coba autoplay dengan audio yang di-mute
+          audio.play().catch(function(error) {
+            console.log("Autoplay gagal:", error);
+            
+            // Kalau autoplay gagal, tunggu interaksi untuk unmute dan play
+            window.addEventListener('click', function() {
+              audio.muted = false; // Unmute audio
+              audio.play().catch(function(error) {
+                console.log("Gagal memutar setelah unmute:", error);
+              });
+            });
+          });
+        };
+      </script>
+</body>
+</html>
